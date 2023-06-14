@@ -1,0 +1,8 @@
+{{> _navbar}}
+<h1>Welcome, {{name}}!</h1>
+
+<form action="/display-name" method="POST">
+  <label for="name">Enter your name:</label>
+  <input type="text" id="name" name="name" required>
+  <input type="submit" value="Submit">
+</form>

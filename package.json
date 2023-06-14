@@ -1,0 +1,25 @@
+{
+  "name": "handlebars-practice",
+  "version": "1.0.0",
+  "description": "practicing the implementation of handlebars",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jlevbury/handlebar_practice.git"
+  },
+  "author": "James Levesque",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jlevbury/handlebar_practice/issues"
+  },
+  "homepage": "https://github.com/Jlevbury/handlebar_practice#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "nodemon": "^2.0.22",
+    "sequelize": "^6.32.0"
+  }
+}
