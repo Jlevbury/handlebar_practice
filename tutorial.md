@@ -1,3 +1,7 @@
+## Handlebars.JS 
+An overview of the use of Handlebars.JS when used in an express.JS application with sequelize.
+
+# File Structure Mock Up
 EXAMPLE APP FOLDER STRUCTURE
 
 ```
@@ -19,7 +23,7 @@ EXAMPLE APP FOLDER STRUCTURE
   package.json
   app.js
 ```
-
+**Directory contents**
 - `node_modules`: Contains all the Node.js modules installed for your project.
 - `public`: Used to serve static files like CSS, JavaScript, and images.
 - `views`: This is where you keep your Handlebars templates. Each file in this directory corresponds to a different page on your website.
@@ -29,7 +33,7 @@ EXAMPLE APP FOLDER STRUCTURE
 - `package.json`: Contains metadata about your app and lists its dependencies.
 - `app.js`: The main entry point to your app. This is where you set up your Express server and define your routes.
 
-Here's a step-by-step recap of what we've done so far:
+**Step-by-Step startup**
 
 1. **Set Up the Project**: We created a new Node.js project and installed the necessary dependencies.
 
@@ -47,8 +51,9 @@ Here's a step-by-step recap of what we've done so far:
 
 8. **Ran the App**: Finally, we ran our app using `node app.js` and tested it in the browser and with Insomnia.
 
+# Handlebars syntax and structure
 
-Absolutely, here's a brief overview of Handlebars syntax, including block helpers, conditional statements, and logic.
+ a brief overview of Handlebars syntax, including block helpers, conditional statements, and logic.
 
 1. **Basic Syntax**
 
@@ -116,7 +121,7 @@ Here's an overview of how a few of the built-in block helpers work:
 
 You can also define your own custom block helpers using `Handlebars.registerHelper()`. 
 
-Absolutely, let's break this down in a step-by-step manner:
+let's break this down in a step-by-step manner:
 
 1. **Import Handlebars**
 
@@ -213,11 +218,9 @@ And that's it! You've now created and used a custom block helper in Handlebars. 
 
 Remember, Handlebars is logic-less, meaning it's designed to keep logic out of your templates as much as possible. It's best used for simple logic like loops and conditionals. For more complex logic, it's usually best to prepare the data in JavaScript before passing it to the template.
 
-Great! Let's dive deeper into Handlebars now. I'll introduce a few more features such as:
 
-- Displaying Lists
-- Conditional Statements
-- Partials
+
+# Block Helpers
 
 1. **Displaying Lists**
 
@@ -290,7 +293,7 @@ hbs.getPartials().then(function (partials) {
 
 In this code, we're registering each file in the `views/partials/` directory as a partial.
 
-You're welcome! I'm glad the summaries were helpful.
+# Integration with Sequelize
 
 The next steps will involve understanding how to interact with a database using Sequelize. This allows your application to store, retrieve, update, and delete data in a structured and organized way.
 
@@ -360,8 +363,9 @@ User.destroy({
 
 This is a brief overview of how Sequelize works. As you start integrating it with your application, you'll get a better understanding of how everything fits together.
 
-Yes, using a `routes` and `models` folder is indeed a best practice when structuring a Node.js application, especially when using Express and Sequelize. This type of organization is commonly referred to as a MVC (Model-View-Controller) structure, which cleanly separates concerns and helps to keep your code organized and maintainable.
-
+Using a `routes` and `models` folder is indeed a best practice when structuring a Node.js application, especially when using Express and Sequelize. This type of organization is commonly referred to as a MVC (Model-View-Controller) structure, which cleanly separates concerns and helps to keep your code organized and maintainable.
+# MVC introduction
+**Mock up directory structure**
 Here's a simplified view of how your folder structure might look like:
 
 ```
@@ -482,9 +486,7 @@ Here's a simplified view of how your folder structure might look like:
 
    sequelize.sync() // This will create the necessary tables in your database
      .then(() => {
-       app
-
-.listen(3000, () => console.log('App listening on port 3000'));
+       app.listen(3000, () => console.log('App listening on port 3000'));
      })
      .catch(err => console.error('Unable to connect to the database:', err));
    ```
